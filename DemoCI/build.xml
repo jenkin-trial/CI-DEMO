@@ -89,16 +89,5 @@
     <!-- version-tag: 1 -->
     <import file="${sdk.dir}/tools/ant/build.xml" />
 
-    <target  depends="build" name="runTests" description="Running tests" >
-        <echo>Running Tests...</echo>
-        <taskdef resource="testngtasks" classpathref="classpath"/>
-        <testng outputDir="${report.dir}"
-            haltonfailure="true"
-            useDefaultListeners="false"
-            listeners="org.uncommons.reportng.HTMLReporter"
-            classpathref="classpath">
-            <xmlfileset dir="${basedir}" includes="testng.xml"/>
-            <!--<classfileset dir="${classes.dir}" includes="**/*.class" />-->
-        </testng>
 
 </project>
